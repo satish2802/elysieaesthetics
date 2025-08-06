@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: elysieaesthetics
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn elysieaesthetics.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: elysieaesthetics.settings
+      - key: PYTHON_VERSION
+        value: 3.12
