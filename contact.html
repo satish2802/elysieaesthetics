@@ -1,16 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>ELYSIE AESTHETICS</title>
-    <link rel="icon" type="jpg" href="static/img/page-2.jpg">
+    <link rel="icon" type="jpg" href="{% static 'img/page-2.jpg' %}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,13 +21,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="static/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="static/css/style.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
+
 <!-- Topbar Start -->
 <div class="container-fluid bg-light d-none d-lg-block">
     <div class="row py-2 px-lg-5">
@@ -65,7 +67,7 @@
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
         <a href="{% url 'homepage' %}" class="navbar-brand d-flex align-items-center ms-2 ms-lg-3">
-            <img src="static/img/page-2.jpg" alt="Company Logo"
+            <img src="{% static 'img/page-2.jpg' %}" alt="Company Logo"
                 style="border-radius: 6px; max-width: 100%;height: 60px; width: auto; margin-right: 10px ;">
             <h1 class="m-0 text-primary">
                 <span class="text-dark">Elysie</span> Aesthetics
@@ -73,7 +75,7 @@
         </a>
 
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <Skinn class="navbar-toggler-icon"></Skinn>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
             <div class="navbar-nav m-auto py-0">
@@ -83,13 +85,7 @@
                 <a href="{% url 'products' %}" class="nav-item nav-link">Products</a>
                 <!-- <a href="{% url 'price' %}" class="nav-item nav-link">Pricing</a> -->
                 <div class="nav-item dropdown">
-                    <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a> -->
-                    <!-- <div class="dropdown-menu rounded-0 m-0">
-                            <a href="appointment.html" class="dropdown-item">Appointment</a>
-                            <a href="opening.html" class="dropdown-item">Open Hours</a>
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        </div> -->
+                    <!-- Dropdown items if needed -->
                 </div>
                 <a href="{% url 'contacts' %}"
                     class="nav-item nav-link {% if request.path == '/contacts/' %}active{% endif %}">Contacts</a>
@@ -101,6 +97,7 @@
 <!-- Navbar End -->
 
 <body>
+<!-- बाकी content वैसा ही रहे -->
 
 
     <!-- Header Start -->
@@ -295,24 +292,24 @@
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="static/lib/easing/easing.min.js"></script>
-    <script src="static/lib/waypoints/waypoints.min.js"></script>
-    <script src="static/lib/counterup/counterup.min.js"></script>
-    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="static/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="static/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="static/mail/jqBootstrapValidation.min.js"></script>
-    <script src="static/mail/contact.js"></script>
+<!-- Contact Javascript File -->
+<script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+<script src="{% static 'mail/contact.js' %}"></script>
 
-    <!-- Template Javascript -->
-    <script src="static/js/main.js"></script>
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+
 </body>
-
 
 </html>
