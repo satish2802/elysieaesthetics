@@ -25,7 +25,8 @@ typing-inspection==0.4.1
 # Optional: for images or charting (include only if used)
 pillow==11.3.0  # Only if you handle images in Django
 matplotlib==3.10.3  # Remove if unused
-numpy==2.3.2  # Remove if unused
+numpy==2.2.6
 psycopg2-binary
+
 
 
