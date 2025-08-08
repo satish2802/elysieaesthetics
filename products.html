@@ -1,16 +1,17 @@
+ {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>ELYSIE AESTHETICS</title>
-    <link rel="icon" type="jpg" href="static/img/page-2.jpg">
+    <link rel="icon" type="image/jpg" href="{% static 'img/page-2.jpg' %}">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="static/img/favicon.ico" rel="icon">
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,14 +21,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="static/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="static/js/bootstrap.min.css" rel="stylesheet">
-
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'js/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="static/css/style.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <!-- Topbar Start -->
 <div class="container-fluid bg-light d-none d-lg-block">
@@ -67,7 +67,7 @@
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
         <a href="{% url 'homepage' %}" class="navbar-brand d-flex align-items-center">
-            <img src="static/img/page-2.jpg" alt="Company Logo"
+            <img src="{% static 'img/page-2.jpg' %}" alt="Company Logo"
                 style="border-radius: 6px; max-width: 100%;height: 60px; width: auto; margin-right: 10px ;">
             <h1 class="m-0 text-primary">
                 <span class="text-dark">Elysie</span> Aesthetics
@@ -75,7 +75,7 @@
         </a>
 
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <Skinn class="navbar-toggler-icon"></Skinn>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
             <div class="navbar-nav m-auto py-0">
@@ -89,6 +89,7 @@
         </div>
     </nav>
 </div>
+
 <!-- Navbar End -->
 
 <body>
@@ -107,38 +108,7 @@
     </div>
     <!-- Header End -->
 
-    <!--new code from aesthetic start-->
-    <!-- Product 1 -->
-    <!-- <div class="container py-5">
-  <div class="row align-items-start gx-5 p-4 rounded shadow-sm" style="background-color: #a9bfce;">
-    <div class="col-lg-7 col-md-12 text-start">
-      <h1 class="mb-4">DR DRAWING / PEELING GEL</h1>
-      <p><strong>FEATURES:</strong></p>
-      <p>This product exfoliates the skin before a procedure in order to improve the result of the procedure. It also helps to moisturize and whiten the treatment area.</p>
-      <p><strong>INGREDIENTS:</strong></p>
-      <p>AQUA, Cellulose, Carbomer, Arginine, Polysorbate 80, Anthemis Nobilis Flower Extract, Hamamelis Virginiana Extract, Aloe Barbadensis Leaf Extract, Centella Asiatica Extract, Rosa Centifolia Flower Water, Camellia Sinensis Leaf Extract, Phenoxyethanol, Disodium EDTA, Fragrance.</p>
-    </div>
-    <div class="col-lg-5 col-md-12 text-center mt-4 mt-lg-0">
-      <img src="static/img/drawing2.jpeg" class="img-fluid shadow" style="border-radius: 20px; max-width: 100%;">
-    </div>
-  </div>
-</div> -->
-
-    <!-- Product 2 -->
-    <!-- <div class="container py-5">
-  <div class="row align-items-start gx-5 p-4 rounded shadow-sm" style="background-color: #a9bfce;">
-    <div class="col-lg-7 col-md-12 text-start">
-      <h1 class="mb-4">DR DRAWING / PEELING GEL</h1>
-      <p><strong>FEATURES:</strong></p>
-      <p>This product exfoliates the skin before a procedure in order to improve the result of the procedure. It also helps to moisturize and whiten the treatment area.</p>
-      <p><strong>INGREDIENTS:</strong></p>
-      <p>AQUA, Cellulose, Carbomer, Arginine, Polysorbate 80, Anthemis Nobilis Flower Extract, Hamamelis Virginiana Extract, Aloe Barbadensis Leaf Extract, Centella Asiatica Extract, Rosa Centifolia Flower Water, Camellia Sinensis Leaf Extract, Phenoxyethanol, Disodium EDTA, Fragrance.</p>
-    </div>
-    <div class="col-lg-5 col-md-12 text-center mt-4 mt-lg-0">
-      <img src="static/img/drawing2.jpeg" class="img-fluid shadow" style="border-radius: 20px; max-width: 100%;">
-    </div>
-  </div>
-</div> -->
+    
 
     <!-- Include Bootstrap 5 (required) -->
 
@@ -246,15 +216,15 @@
                                     Cocoyl Taurate, Phenoxyethanol, Disodium EDTA, Fragrance.
                                 </p>
                             </div>
-                            <div class="animatedImageSlider"
-                                style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+<div class="animatedImageSlider"
+    style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="static/img/bubblefoam.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+    <img src="{% static 'img/bubblefoam.jpeg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="static/img/bubb2.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
-                            </div>
+    <img src="{% static 'img/bubb2.jpeg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+</div>
                         </div>
 
 
@@ -275,15 +245,15 @@
                                     Phenoxyethanol, Disodium EDTA, Fragrance.
                                 </p>
                             </div>
-                            <div class="animatedImageSlider"
-                                style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+<div class="animatedImageSlider"
+    style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="static/img/drawing1.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+    <img src="{% static 'img/drawing1.jpeg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="static/img/drawing2.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
-                            </div>
+    <img src="{% static 'img/drawing2.jpeg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+</div>
                         </div>
 
                         <!--product 1.2-->
@@ -306,11 +276,11 @@
                             <div class="animatedImageSlider"
                                 style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="static/img/sd_control.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+                               <img src="{% static 'img/sd_control.jpeg' %}" class="img-fluid slider-img"
+     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="static/img/sdcontrol1.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+<img src="{% static 'img/sdcontrol1.jpeg' %}" class="img-fluid slider-img"
+     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
                             </div>
                         </div>
 
@@ -334,11 +304,11 @@
                             <div class="animatedImageSlider"
                                 style="position: relative; width: 100%; max-width: 450px; height: 350px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="static/img/cooling_gel.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+                               <img src="{% static 'img/cooling_gel.jpeg' %}" class="img-fluid slider-img"
+     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                <img src="static/img/cooling_gel1.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+<img src="{% static 'img/cooling_gel1.jpeg' %}" class="img-fluid slider-img"
+     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
                             </div>
                         </div>
 
@@ -371,8 +341,8 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 text-center">
-                                <img src="static/img/gfcell1.jpg" class="img-fluid shadow"
-                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                                <img src="{% static 'img/gfcell1.jpg' %}" class="img-fluid shadow"
+     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
                         <!--prodct 2.2-->
@@ -405,8 +375,8 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 text-center">
-                                <img src="static/img/gfcell2.jpg" class="img-fluid shadow"
-                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                                <img src="{% static 'img/gfcell2.jpg' %}" class="img-fluid shadow"
+     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
                     </div>
@@ -435,8 +405,8 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 text-center">
-                                <img src="static/img/gfcell_h1.jpg" class="img-fluid shadow"
-                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+<img src="{% static 'img/gfcell_h1.jpg' %}" class="img-fluid shadow"
+     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
                         <!--prodct 3-->
@@ -469,8 +439,9 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 text-center">
-                                <img src="static/img/gfcell_h2.jpg" class="img-fluid shadow"
-                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                                {% load static %}
+<img src="{% static 'img/gfcell_h2.jpg' %}" class="img-fluid shadow"
+     style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                             </div>
                         </div>
                     </div>
@@ -496,15 +467,17 @@
                                 </p>
                             </div>
                             <div class="col-lg-5 d-flex justify-content-center align-items-center">
-                                <div class="animatedImageSlider"
-                                    style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+{% load static %}
+<div class="animatedImageSlider"
+    style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                    <img src="static/img/t4.jpg" class="img-fluid slider-img"
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+    <img src="{% static 'img/t4.jpg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                    <img src="static/img/totalcare.jpg" class="img-fluid slider-img"
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
-                                </div>
+    <img src="{% static 'img/totalcare.jpg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+</div>
+
                             </div>
 
                         </div>
@@ -525,10 +498,12 @@
                                     Hydrolyzed Collagen, Dipotassium Glycyrrhizate, Beta-Glucan
                                 </p>
                             </div>
-                            <div class="col-lg-5 text-center">
-                                <img src="static/img/mask.jpeg" class="img-fluid shadow"
-                                    style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
-                            </div>
+{% load static %}
+<div class="col-lg-5 text-center">
+    <img src="{% static 'img/mask.jpeg' %}" class="img-fluid shadow"
+         style="border-radius: 20px; height: 450px; width: 100%; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+</div>
+
                         </div>
 
                     </div>
@@ -558,17 +533,21 @@
                                     Phenoxyethanol,Disodium EDTA,Fragrance.
                                 </p>
                             </div>
-                            <div class="animatedImageSlider"
-                                style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+{% load static %}
+<div class="animatedImageSlider"
+    style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                <img src="static/img/rej3.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
-                                <img src="static/img/rej2.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
-                                <img src="static/img/rej4.jpeg" class="img-fluid slider-img"
-                                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+    <img src="{% static 'img/rej3.jpeg' %}" class="img-fluid slider-img"
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                            </div>
+    <img src="{% static 'img/rej2.jpeg' %}" class="img-fluid slider-img"
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+
+    <img src="{% static 'img/rej4.jpeg' %}" class="img-fluid slider-img"
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+
+</div>
+
                         </div>
                         <!--prod 61.-->
 
@@ -598,18 +577,21 @@
                             </p> -->
                             </div>
                             <div class="col-lg-5 d-flex justify-content-center align-items-center">
-                                <div class="animatedImageSlider"
-                                    style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+{% load static %}
+<div class="animatedImageSlider"
+    style="position: relative; width: 100%; max-width: 450px; height: 450px; overflow: hidden; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
 
-                                    <img src="static/img/white.jpeg" class="img-fluid slider-img"
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
+    <img src="{% static 'img/white.jpeg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; z-index: 1;">
 
-                                    <img src="static/img/white2.jpeg" class="img-fluid slider-img"
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
-                                    <img src="static/img/white3.jpeg" class="img-fluid slider-img"
-                                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+    <img src="{% static 'img/white2.jpeg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
 
-                                </div>
+    <img src="{% static 'img/white3.jpeg' %}" class="img-fluid slider-img"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 20px; transition: opacity 1s ease-in-out; opacity: 0; z-index: 0;">
+
+</div>
+
                             </div>
                         </div>
 
@@ -712,45 +694,57 @@
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="static/lib/easing/easing.min.js"></script>
-    <script src="static/lib/waypoints/waypoints.min.js"></script>
-    <script src="static/lib/counterup/counterup.min.js"></script>
-    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="static/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="static/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="static/js/bootstrap.bundle.min.js"></script>
+{% load static %}
+
+<!-- External Libraries from CDN -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- Local Libraries served via Django static -->
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+<script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 
-    <!-- Contact Javascript File -->
-    <script src="static/mail/jqBootstrapValidation.min.js"></script>
-    <script src="static/mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="static/js/main.js"></script>
+{% load static %}
 
-    <!--new script-->
-    <script>
-        const productData = {
-            product1: {
-                name: "Facial Cleanser",
-                description: "Gentle foaming cleanser for daily use, removes impurities without drying skin.",
-                image: "static/img/products/cleanser.jpg"
-            },
-            product2: {
-                name: "Vitamin C Serum",
-                description: "Brightens skin and reduces dark spots with 20% Vitamin C and hyaluronic acid.",
-                image: "static/img/products/vitamin-c.jpg"
-            },
-            product3: {
-                name: "Hydrating Toner",
-                description: "Balances pH and refreshes skin with natural rose water and witch hazel.",
-                image: "static/img/products/toner.jpg"
-            }
-        };
+<!-- Contact Javascript File -->
+<script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+<script src="{% static 'mail/contact.js' %}"></script>
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+
+
+   {% load static %}
+<script>
+  const STATIC_URL = "{% static '' %}";
+
+  const productData = {
+    product1: {
+      name: "Facial Cleanser",
+      description: "Gentle foaming cleanser for daily use, removes impurities without drying skin.",
+      image: STATIC_URL + "img/products/cleanser.jpg"
+    },
+    product2: {
+      name: "Vitamin C Serum",
+      description: "Brightens skin and reduces dark spots with 20% Vitamin C and hyaluronic acid.",
+      image: STATIC_URL + "img/products/vitamin-c.jpg"
+    },
+    product3: {
+      name: "Hydrating Toner",
+      description: "Balances pH and refreshes skin with natural rose water and witch hazel.",
+      image: STATIC_URL + "img/products/toner.jpg"
+    }
+  };
+</script>
+
 
         function showDetails(key) {
             const product = productData[key];
@@ -798,6 +792,5 @@
 
 
 </body>
-
 
 </html>
