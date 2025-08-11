@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',  # ← required for sitemap support
     'django.contrib.sites',     # ← required by some sitemap features
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -147,6 +148,7 @@ import os
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 
