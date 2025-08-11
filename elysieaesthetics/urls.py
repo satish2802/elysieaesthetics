@@ -18,4 +18,6 @@ urlpatterns = [
     path('aboutUs/', views.aboutUs, name='aboutUs'),
     path('google813dd604dc222326.html', TemplateView.as_view(template_name='google813dd604dc222326.html')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
 ]
+
