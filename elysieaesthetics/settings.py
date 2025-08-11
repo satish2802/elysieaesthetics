@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'elysieaesthetics',
+    'django.contrib.sitemaps',  # ← required for sitemap support
+    'django.contrib.sites',     # ← required by some sitemap features
 ]
 
 MIDDLEWARE = [
