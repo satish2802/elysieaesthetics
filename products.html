@@ -747,15 +747,6 @@
 </script>
 
 
-        function showDetails(key) {
-            const product = productData[key];
-            document.getElementById('productDetails').innerHTML = `
-            <h3>${product.name}</h3>
-            <img src="${product.image}" alt="${product.name}" class="img-fluid mb-3" style="max-height: 200px;">
-            <p>${product.description}</p>
-        `;
-        }
-    </script>
 
     <script>
         document.querySelectorAll('#product-tabs .nav-link').forEach(button => {
@@ -795,5 +786,6 @@
 </body>
 
 </html>
+
 
 
