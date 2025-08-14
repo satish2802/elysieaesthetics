@@ -155,17 +155,34 @@
                 <li data-target="#header-carousel" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
+                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+                    rel="stylesheet">
+
                 <div class="carousel-item position-relative active" style="min-height: 70vh;">
-                    <img class="position-absolute w-100 h-100" src="static/img/3.jpeg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/3.jpg' %}"
+                        style="object-fit: cover;">
+
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown"
-                                style="letter-spacing: 3px;">The Future Of Skin</h6>
-                            <h3 class="display-4 text-capitalize text-white mb-5">It is not just a Medifacial...</h3>
-                            <!-- <h3 class="display-5 text-white mb-5">It's More...</h3> -->
-                            <!-- <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet.
-                                Sadips duo stet amet amet ndiam elitr ipsum labore diam</p> -->
-                            <!-- <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a> -->
+
+                            <h6 class="text-uppercase mb-3 animate__animated animate__fadeInDown"
+                                style="letter-spacing: 3px;  color: antiquewhite;">The Future Of Skin</h6>
+
+                            <h3 style="font-family: 'Cinzel', serif;
+                                font-size: 3.2rem;
+                                font-weight: 600;
+                                letter-spacing: 0.25em;
+                                text-transform: uppercase;
+                                color: #f5f5f5;
+                                text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+                                text-align: center;
+                                margin-bottom: 0.5rem;">Elysie Aesthetics 
+                            </h3>
+                            <p class="mb-5" style="font-family: 'Playfair Display', serif;
+                                color: antiquewhite;
+                                font-size: 2rem; font-style: italic; margin-left: 0;">
+                                Secret of Your Beauty
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -621,6 +638,7 @@
 
 
 </html>
+
 
 
 
